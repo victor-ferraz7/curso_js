@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula Prompt - Conversão</title>
+    <style>
+        body{
+            background-color: rgba(116, 116, 167, 0.445);
+        }
+        p{
+            background-color: black;
+            color: rgba(34, 204, 190, 0.342);
+            width: 170px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversão </h1>
+    
+    <p>
+       Bora bora
+    </p>
+
+    <p> o Valor deu  : <span id='ex1'></span></p>
+
+    <p>  <span id='ex2'></span></p>
+    <script>
+       
+       var n1 = Number(window.prompt('Digite um número: ')) // versão nova , antiga = Number.parseInt
+       var n2 = Number(window.prompt('Digite outro número: '))
+       var s = n1 + String(n2) // toString :)
+       var linguagem = 'JavaScript'
+
+      document.getElementById('ex1').innerHTML = s
+      document.getElementById('ex2').innerHTML = `Estudando ${linguagem}`
+
+
+    </script>
+</body>
+</html>
+
+<!-- Tratamento de dados - Curso JavaScript  #06 -->
