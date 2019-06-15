@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio Aula 10</title>
+</head>
+<body>
+
+    <h1>É Brasileiro ?</h1>
+
+    <div id="cnt">
+        Digite o país de seu Nascimento: <input type="text" name="txt" id="txt"><input type="button" value="resultado" onclick="resultado()"><br>
+        <span id="r"></span>
+    </div>
+    
+    <script>
+
+    function resultado(){
+        var nasc = document.getElementById('txt').value
+
+        if(nasc != "Brasil" && nasc != "brasil"){
+            document.getElementById('r').innerHTML = `Você nasceu fora do Brasil, seu país é:${nasc} `
+        }
+        else{
+            document.getElementById('r').innerHTML = ` Você nasceu  no ${nasc} você é BRASILEIRO ! `
+        }
+    }
+    
+    </script>
+</body>
+</html>
