@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        #area{
+        font: normal 20pt Arial;
+        background: rgb(4, 121, 49);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        }
+    
+        #div2{
+        font: normal 20pt Arial;
+        background: rgb(10, 10, 100);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja
+    </div>
+    
+    <div id="div2">
+        Div#2 Man
+    </div>
+
+    <script>
+    function clicar(){
+        var a = document.getElementById('area')
+        a.innerHTML = "clicou"
+    }
+
+    function entrar(){
+        var a = document.getElementById('area')
+        a.innerHTML= 'entrou'
+        a.style.backgroundColor = 'gray'
+    }
+
+    function sair(){
+        var a = document.querySelector('div#area')
+        a.innerHTML= 'Saiu'
+        a.style.backgroundColor = "green"
+    }
+
+    var b = document.getElementById('div2')
+        b.addEventListener('click', clicou)
+    
+    function clicou(){
+        var b = document.getElementById('div2').style.backgroundColor = 'pink'
+      }
+
+    
+    </script>
+</body>
+</html>
