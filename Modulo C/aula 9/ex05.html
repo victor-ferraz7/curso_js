@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros Passos com Dom</title>
+    <style>
+        body{
+            background: #100dc0;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1> Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p> Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="clica">Clica em MIM</div>
+    <div id="div2">Criada só pra ser pega pelo querySelector</div>
+
+    <script>
+        var p1 = document.getElementsByTagName("p")[0]
+        var p2 = document.getElementsByTagName("p")[1]
+        var c = document.getElementById('clica')
+        var d2 = document.querySelector('div#div2')
+        document.write(`No primeiro  parágrafo está escrito :" ${p1.innerText} " e foi selecionado com getElementsByTagName('p')[0] `)
+        p2.style.backgroundColor = "red"
+
+        c.innerHTML = "Mudado Via JS"
+        d2.innerHTML = "Fé no Pai, bora que vai "
+        
+
+</script>
+</body>
+</html>
