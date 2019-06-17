@@ -1,14 +1,23 @@
 function gerar(){
-    var numero = Number(document.getElementById('numero').value)
-    var res = document.getElementById('res')
-    var textbox = document.createElement('textarea')
-    textbox.setAttribute('id','tbda')
+    var numero = document.getElementById('numero')
+    var tab = document.getElementById('seltab')
+ 
+    if(numero.value.length == 0){
+        alert("Por favor, digite um número")
+    }
+    else{
+        let n = Number(numero.value)
+        let c = 1
+        tab.innerHTML = ''
 
-    for(i = 0; i <= 10 ; i++){
-        var soma = i * numero
-        textbox.innerHTML= `${numero} x ${i} = ${soma}`
+        while(c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n * c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+            c++
+        }
     }
 
-    res.appendChild(textbox)
-    gerar.stopEventPropagation()
+    
 }
